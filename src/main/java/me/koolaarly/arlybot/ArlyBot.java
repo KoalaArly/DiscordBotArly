@@ -35,7 +35,8 @@ public class ArlyBot extends Throwable{
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
         builder.setStatus(OnlineStatus.ONLINE);
         builder.setActivity(Activity.watching("dir beim Schlafen zu."));
-        builder.enableIntents(GatewayIntent.GUILD_MESSAGE_TYPING, GatewayIntent.DIRECT_MESSAGE_TYPING);
+        builder.enableIntents(GatewayIntent.GUILD_MESSAGE_TYPING, GatewayIntent.DIRECT_MESSAGE_TYPING, GatewayIntent.MESSAGE_CONTENT);
+
 
         shardManager = builder.build();
 
